@@ -51,7 +51,7 @@ class StartScreenController: UIViewController {
     
     
     func endStartscreen () {
-        let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
             
             self.performSegue(withIdentifier: "startScreenToHomeScreen", sender: self)
         }

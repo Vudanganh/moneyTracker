@@ -109,7 +109,7 @@
         <!--Portfolio-->
         <scene sceneID="gmc-xj-2rL">
             <objects>
-                <navigationController title="Portfolio" id="avb-kM-ULr" sceneMemberID="viewController">
+                <navigationController title="Portfolio" modalPresentationStyle="fullScreen" id="avb-kM-ULr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Portfolio" id="Aia-0a-AZW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yFb-Q6-aZh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -126,7 +126,7 @@
         <!--View Controller-->
         <scene sceneID="iZg-rB-STx">
             <objects>
-                <viewController id="7Fn-6b-JIy" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="7Fn-6b-JIy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bY-Ip-uqS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +142,7 @@
         <!--View Controller-->
         <scene sceneID="iwa-3b-z4Q">
             <objects>
-                <viewController id="KIc-ZE-DUm" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="KIc-ZE-DUm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ekx-nG-bSA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,17 +155,54 @@
             </objects>
             <point key="canvasLocation" x="1087" y="1467"/>
         </scene>
-        <!--View Controller-->
+        <!--Watchlist Controller-->
         <scene sceneID="2yC-xk-Lue">
             <objects>
-                <viewController id="uaa-tu-nz9" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="uaa-tu-nz9" customClass="WatchlistController" customModule="moneyTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oda-ap-yXW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1gk-H6-nlc">
+                                <rect key="frame" x="0.0" y="66" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wxc-m5-0Rv">
+                                <rect key="frame" x="0.0" y="127" width="414" height="632"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="nEz-63-6qY">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nEz-63-6qY" id="AYl-gV-wUQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="uaa-tu-nz9" id="4ns-Hy-HDH"/>
+                                    <outlet property="delegate" destination="uaa-tu-nz9" id="Rrs-pq-b2n"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Lyh-M7-qr5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1gk-H6-nlc" firstAttribute="trailing" secondItem="Lyh-M7-qr5" secondAttribute="trailing" id="9Vh-tU-QFY"/>
+                            <constraint firstItem="Wxc-m5-0Rv" firstAttribute="top" secondItem="1gk-H6-nlc" secondAttribute="bottom" constant="10" id="B6E-8X-ckK"/>
+                            <constraint firstItem="Wxc-m5-0Rv" firstAttribute="leading" secondItem="Lyh-M7-qr5" secondAttribute="leading" id="Fzr-23-neo"/>
+                            <constraint firstItem="Lyh-M7-qr5" firstAttribute="bottom" secondItem="Wxc-m5-0Rv" secondAttribute="bottom" id="IVd-rx-vNA"/>
+                            <constraint firstItem="Lyh-M7-qr5" firstAttribute="trailing" secondItem="Wxc-m5-0Rv" secondAttribute="trailing" id="LKZ-Da-cwC"/>
+                            <constraint firstItem="1gk-H6-nlc" firstAttribute="top" secondItem="Lyh-M7-qr5" secondAttribute="top" constant="10" id="TpQ-nU-Yh2"/>
+                            <constraint firstItem="1gk-H6-nlc" firstAttribute="leading" secondItem="Lyh-M7-qr5" secondAttribute="leading" id="de4-Rp-Hcf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ceK-hd-Tvz"/>
+                    <connections>
+                        <outlet property="searchBarOutlet" destination="1gk-H6-nlc" id="cBk-Tl-K0D"/>
+                        <outlet property="watchlistTableView" destination="Wxc-m5-0Rv" id="aXc-DY-kyw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6g-Gf-j3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +211,7 @@
         <!--View Controller-->
         <scene sceneID="IQD-Rr-PiO">
             <objects>
-                <viewController id="pNZ-r5-Fiq" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="pNZ-r5-Fiq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OUe-uw-4ks">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

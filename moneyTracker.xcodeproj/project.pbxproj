@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288D9444264D3FF70078E2F6 /* WatchlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D9443264D3FF70078E2F6 /* WatchlistController.swift */; };
 		28ECFF17264AEF160080DBFF /* ARCube.json in Resources */ = {isa = PBXBuildFile; fileRef = 28ECFF16264AEF160080DBFF /* ARCube.json */; };
 		28EEA25B264AD2CE0059E99D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EEA25A264AD2CE0059E99D /* AppDelegate.swift */; };
 		28EEA25D264AD2CE0059E99D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EEA25C264AD2CE0059E99D /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		288D9443264D3FF70078E2F6 /* WatchlistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistController.swift; sourceTree = "<group>"; };
 		28ECFF16264AEF160080DBFF /* ARCube.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ARCube.json; sourceTree = "<group>"; };
 		28EEA257264AD2CE0059E99D /* moneyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EEA25A264AD2CE0059E99D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				28EEA273264AD67F0059E99D /* PortfolioController.swift */,
 				28EEA275264AD6BF0059E99D /* TransactionsController.swift */,
 				28EEA277264AD6E30059E99D /* SettingsController.swift */,
+				288D9443264D3FF70078E2F6 /* WatchlistController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				28EEA274264AD67F0059E99D /* PortfolioController.swift in Sources */,
 				28EEA278264AD6E30059E99D /* SettingsController.swift in Sources */,
 				28EEA25B264AD2CE0059E99D /* AppDelegate.swift in Sources */,
+				288D9444264D3FF70078E2F6 /* WatchlistController.swift in Sources */,
 				28EEA25D264AD2CE0059E99D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

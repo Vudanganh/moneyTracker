@@ -1,0 +1,6 @@
+framework module Pods_moneyTracker {
+  umbrella header "Pods-moneyTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
